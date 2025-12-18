@@ -139,6 +139,7 @@
             <a href="#soal9" class="nav-link"><i class="fas fa-clipboard-check me-2"></i> 9. Sprint Review</a>
             <a href="#soal10" class="nav-link"><i class="fas fa-sync me-2"></i> 10. Retrospective</a>
             <a href="#soal11" class="nav-link"><i class="fas fa-mobile-alt me-2"></i> 11. Simulasi Mobile</a>
+                        <a href="#soal12" class="nav-link"><i class="fas fa-random me-2"></i> 12. Perubahan Mendadak</a>
             <a href="#soal13" class="nav-link"><i class="fas fa-chart-line me-2"></i> 13. Sprint Metrics</a>
             <a href="#soal14" class="nav-link"><i class="fas fa-list-ul me-2"></i> 14. Task Details</a>
         </div>
@@ -507,51 +508,244 @@
 
         <section id="soal10">
             <div class="card">
-                <div class="card-header">Soal 10: Retrospective (Start-Stop-Continue)</div>
+                <div class="card-header">Soal 10: Sprint Retrospective Action Plan</div>
                 <div class="card-body">
-                    <div class="row text-center">
+                    <p class="text-muted small mb-2">Lakukan retrospective menggunakan format Start-Stop-Continue. Identifikasi 3 hal yang berjalan baik, 3 yang perlu diperbaiki,<br>dan buat action plan terukur.</p>
+                    <p class="text-muted small">Sprint Retrospective dilakukan setelah Sprint Review untuk mengevaluasi proses kerja tim berdasarkan hasil sprint, metrik sprint, serta feedback stakeholder. Retrospective ini berfokus pada penyebab tidak tercapainya target sprint secara penuh (35 dari 40 story points) dan temuan dari fitur partially done serta carried over.</p>
+                    <div class="row text-center mt-4">
                         <div class="col-md-4">
                             <h6 class="text-success fw-bold">START</h6>
-                            <p class="small">Hitung kapasitas tim lebih realistis. Peer review sebelum "Done".</p>
+                            <p class="small">Mulai menghitung kapasitas tim sebelum Sprint Planning agar target sprint lebih realistis (menghindari selisih velocity seperti 35/40).</p>
                         </div>
                         <div class="col-md-4 border-start border-end">
                             <h6 class="text-danger fw-bold">STOP</h6>
-                            <p class="small">Estimasi optimis tanpa cek teknis. Perubahan dadakan di hari terakhir.</p>
+                            <p class="small">Menghentikan estimasi optimistis tanpa mempertimbangkan kompleksitas teknis (penyebab fitur F dan G tidak selesai).</p>
                         </div>
                         <div class="col-md-4">
                             <h6 class="text-primary fw-bold">CONTINUE</h6>
-                            <p class="small">Demo fitur saat Review. Kolaborasi aktif tim.</p>
+                            <p class="small">Melanjutkan Sprint Review dengan demo fitur, karena 5 fitur berhasil di-accept oleh Product Owner.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="soal11">
+<section id="soal11">
             <div class="card">
-                <div class="card-header">Soal 11: Simulasi Mobile App (Fitness Tracker)</div>
+                <div class="card-header">Soal 11: Simulasi Proyek Pengembangan Aplikasi Mobile</div>
                 <div class="card-body">
-                    <p><strong>Goal:</strong> Mengembangkan aplikasi dalam 3 Sprint (6 minggu).</p>
+                    <p class="mb-2"><strong>Deskripsi:</strong> Kelompok bertugas mengembangkan aplikasi mobile fitness tracker dalam 3 sprint (6 minggu). Rencanakan end-to-end dari product backlog hingga delivery.</p>
+
+                    <hr>
+                    <h6 class="fw-bold text-primary mb-2">Product Backlog Creation (MoSCoW)</h6>
+                    <p class="text-muted small">Product Owner menyusun Product Backlog yang berisi seluruh kebutuhan produk, baik fitur yang akan dikerjakan dalam sprint maupun fitur untuk pengembangan jangka panjang. Product Backlog dikelompokkan untuk memudahkan prioritisasi dan perencanaan sprint.</p>
                     <div class="table-responsive">
-                        <table class="table table-bordered table-sm small text-center">
-                            <thead class="table-light">
+                        <table class="table table-bordered table-sm small mb-0">
+                            <thead class="table-light text-center">
                                 <tr>
-                                    <th>Sprint 1 (Foundation)</th>
-                                    <th>Sprint 2 (Advanced)</th>
-                                    <th>Sprint 3 (Polish)</th>
+                                    <th class="text-danger">Must Have</th>
+                                    <th class="text-warning">Should Have</th>
+                                    <th class="text-info">Could Have</th>
+                                    <th class="text-secondary">Won't Have</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>User registration &amp; login</td><td>Performance optimization</td><td>UI/UX refinement</td><td>Payment &amp; subscription</td></tr>
+<tr><td>Profile setup</td><td>Security &amp; data privacy</td><td>Accessibility improvement</td><td>Premium features</td></tr>
+<tr><td>Basic activity tracking</td><td>Error handling &amp; logging</td><td>Dark mode</td><td>Admin dashboard</td></tr>
+<tr><td>Goal setting</td><td>API integration</td><td>Branding alignment</td><td>Analytics &amp; reporting</td></tr>
+<tr><td>Progress visualization (charts)</td><td>Database optimization</td><td></td><td></td></tr>
+<tr><td>Workout library</td><td></td><td></td><td></td></tr>
+<tr><td>Social sharing</td><td></td><td></td><td></td></tr>
+<tr><td>Notifications</td><td></td><td></td><td></td></tr>
+<tr><td>Wearable device integration</td><td></td><td></td><td></td></tr>
+<tr><td>Data export (CSV / PDF)</td><td></td><td></td><td></td></tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <hr>
+                    <h6 class="fw-bold text-primary mb-2">Sprint Planning (3 Sprint)</h6>
+                    <p class="text-muted small">Pada awal setiap sprint, tim melakukan Sprint Planning untuk:
+1. Menentukan Sprint Goal
+2. Memilih item dari Product Backlog menjadi Sprint Backlog
+3. Menyesuaikan scope sprint dengan kapasitas tim dan estimasi story points</p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-sm small mb-0 align-middle">
+                            <thead class="table-light text-center">
+                                <tr>
+                                    <th style="width:18%">Aspek</th>
+                                    <th>Sprint 1<br><span class="text-muted">Core Features</span></th>
+                                    <th>Sprint 2<br><span class="text-muted">Advanced Features</span></th>
+                                    <th>Sprint 3<br><span class="text-muted">Polish &amp; Integration</span></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Login, Profile, Tracking Dasar</td>
-                                    <td>Goals, Charts, Social Sharing</td>
-                                    <td>Wearable, Notif, Optimize</td>
+                                    <td class="fw-bold">Fokus</td>
+                                    <td>Fondasi aplikasi</td>
+                                    <td>Peningkatan pengalaman pengguna</td>
+                                    <td>Kualitas &amp; Integrasi</td>
                                 </tr>
                                 <tr>
-                                    <td><span class="badge bg-secondary">Est: 30-32 SP</span></td>
-                                    <td><span class="badge bg-secondary">Est: 32-35 SP</span></td>
-                                    <td><span class="badge bg-secondary">Est: 30 SP</span></td>
+                                    <td class="fw-bold">Sprint Backlog Items</td>
+                                    <td><ul class='small mb-0 ps-3'><li>1. User registration &amp; login </li><li>2. Profile setup pengguna</li><li>3. Basic activity tracking (walking, running)</li></ul></td>
+                                    <td><ul class='small mb-0 ps-3'><li>1. Goal setting (target langkah &amp; kalori)</li><li>2. Progres visualization (grafik)</li><li>3. Social sharing</li><li>4. Workout library dasar</li></ul></td>
+                                    <td><ul class='small mb-0 ps-3'><li>1. Wearable device integration </li><li>2. Push notifications</li><li>3. Performance optimization </li><li>4. Bug fixing &amp; testing</li></ul></td>
                                 </tr>
+                                <tr>
+                                    <td class="fw-bold">Estimasi</td>
+                                    <td><span class="badge bg-secondary">±30–32 story points</span></td>
+                                    <td><span class="badge bg-secondary">±32–35 story points</span></td>
+                                    <td><span class="badge bg-secondary">±30 story points</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Outcome</td>
+                                    <td>Aplikasi sudah dapat digunakan untuk tracking aktivitas dasar oleh user.</td>
+                                    <td>User dapat memantau progres dan berinteraksi secara sosial.</td>
+                                    <td>Aplikasi siap untuk release dengan performa stabil.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <hr>
+                    <h6 class="fw-bold text-primary mb-2">Daily Scrum</h6>
+                    <p class="text-muted small mb-0">Daily Scrum dilakukan setiap hari selama sprint untuk:<br>1. Menyelaraskan progres tim<br>2. Mengidentifikasi hambatan lebih awal<br>3. Menjaga fokus terhadap Sprint Goal</p>
+
+                    <hr>
+                    <h6 class="fw-bold text-primary mb-2">Sprint Review</h6>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm small mb-0 text-center">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Sprint</th>
+                                    <th>Fitur Didemo</th>
+                                    <th>Feedback Stakeholder</th>
+                                    <th>Status PO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Sprint 1</td><td>Login, Tracking</td><td>Sudah sesuai kebutuhan dasar</td><td><span class='badge bg-success'>Accepted</span></td></tr>
+<tr><td>Sprint 2</td><td>Goal &amp; Charts</td><td>Minta UI grafik diperjelas</td><td><span class='badge bg-success'>Accepted</span></td></tr>
+<tr><td>Sprint 3</td><td>Integration &amp; Performance</td><td>Aplikasi siap digunakan</td><td><span class='badge bg-success'>Accepted</span></td></tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <hr>
+                    <h6 class="fw-bold text-primary mb-2">Sprint Retrospective (Action Plan)</h6>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded bg-light h-100">
+                                <div class="fw-bold text-success mb-1">START</div>
+                                <ul class='small mb-0 ps-3'><li>Menghitung kapasitas tim sebelum Sprint Planning</li><li>Melakukan peer review sebelum item masuk “Done”</li><li>Memecah user story kompleks lebih awal</li></ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded bg-light h-100">
+                                <div class="fw-bold text-danger mb-1">STOP</div>
+                                <ul class='small mb-0 ps-3'><li>Estimasi optimistis tanpa validasi teknis</li><li>Perubahan non-kritis di akhir sprint</li><li>Membawa user story besar tanpa breakdown</li></ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 border rounded bg-light h-100">
+                                <div class="fw-bold text-primary mb-1">CONTINUE</div>
+                                <ul class='small mb-0 ps-3'><li>Demo fitur langsung ke stakeholder</li><li>Kolaborasi tim yang aktif</li><li>Fokus pada kualitas dibanding kuantitas</li></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <h6 class="fw-bold text-primary mb-2">Release &amp; Delivery ke User</h6>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-sm small mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th style="width:18%">Tahap</th>
+                                    <th>Aktivitas</th>
+                                    <th>Output</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class='fw-bold'>Pre-Release</td><td>Final testing &amp; bug fixing</td><td>Aplikasi memenuhi DoD</td></tr>
+<tr><td class='fw-bold'>Release</td><td>Deploy ke App Store / Play Store (simulasi)</td><td>Produk tersedia untuk user</td></tr>
+<tr><td class='fw-bold'>Post-Release</td><td>Kumpulkan feedback user</td><td>Input Product Backlog baru</td></tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <hr>
+                    <h6 class="fw-bold text-primary mb-2">Post-Release Feedback Loop</h6>
+                    <p class="text-muted small mb-0">1. Feedback user dikumpulkan<br>2. Item dari Should Have &amp; Could Have diprioritaskan ulang<br>3. Siklus Scrum berlanjut untuk iterasi berikutnya</p>
+                </div>
+            </div>
+        </section>
+
+<section id="soal12">
+            <div class="card">
+                <div class="card-header">Soal 12: Penanganan Perubahan Mendadak dari Stakeholder</div>
+                <div class="card-body">
+                    <p class="text-muted small mb-3">Skenario: di tengah sprint 2, stakeholder meminta penambahan fitur payment integration yang urgent karena partnership baru. analisis dampak dan buat keputusan </p>
+
+                    <div class="row g-3">
+                        <div class="col-lg-6">
+                            <h6 class="fw-bold text-primary">Impact Analysis</h6>
+                            <div class="table-responsive">
+                                <table class="table table-sm table-bordered small mb-0">
+                                    <thead class="table-light">
+                                        <tr><th style="width:35%">Aspek</th><th>Analisis</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class='fw-bold'>Fitur Baru</td><td>Payment Integration</td></tr>
+<tr><td class='fw-bold'>Kompleksitas</td><td>Tinggi (API pihak ketiga, keamanan, testing)</td></tr>
+<tr><td class='fw-bold'>Estimasi Effort</td><td>8–10 Story Points</td></tr>
+<tr><td class='fw-bold'>Dependency</td><td>Payment gateway, security module</td></tr>
+<tr><td class='fw-bold'>Dampak ke Sprint Goal</td><td>Berpotensi mengganggu penyelesaian Sprint 2</td></tr>
+<tr><td class='fw-bold'>Risiko</td><td>Bug, keterlambatan sprint, penurunan kualitas</td></tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <h6 class="fw-bold text-primary">Timeline Assessment</h6>
+                            <div class="table-responsive">
+                                <table class="table table-sm table-bordered small mb-0">
+                                    <thead class="table-light">
+                                        <tr><th style="width:35%">Item</th><th>Assessment</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class='fw-bold'>Status Sprint</td><td>Sprint 2 sedang berjalan</td></tr>
+<tr><td class='fw-bold'>Kapasitas Tersisa</td><td>Terbatas (Sprint Backlog hampir penuh)</td></tr>
+<tr><td class='fw-bold'>Kelayakan dikerjakan di Sprint 2</td><td>❌ Tidak realistis</td></tr>
+<tr><td class='fw-bold'>Keputusan Timeline</td><td>Dipindahkan ke Sprint 3</td></tr>
+<tr><td class='fw-bold'>Alasan</td><td>Menjaga stabilitas Sprint Goal &amp; kualitas produk</td></tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <h6 class="fw-bold text-primary">Stakeholder Discussion</h6>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm small mb-0">
+                            <thead class="table-dark">
+                                <tr><th style="width:35%">Topik Diskusi</th><th>Hasil</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class='fw-bold'>Urgensi fitur payment</td><td>Tinggi karena partnership baru</td></tr>
+<tr><td class='fw-bold'>Trade-off</td><td>Menunda beberapa fitur polish</td></tr>
+<tr><td class='fw-bold'>Risiko jika dipaksakan</td><td>Sprint gagal &amp; technical debt</td></tr>
+<tr><td class='fw-bold'>Keputusan Stakeholder</td><td>Setuju payment masuk Sprint 3</td></tr>
+<tr><td class='fw-bold'>Approval Product Owner</td><td>Disetujui</td></tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -559,7 +753,7 @@
             </div>
         </section>
 
-        <section id="soal13">
+<section id="soal13">
             <div class="card">
                 <div class="card-header">Soal 13: Sprint Metrics Summary</div>
                 <div class="table-responsive">
