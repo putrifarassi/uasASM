@@ -429,83 +429,277 @@
             </div>
         </section>
 
-        <section id="soal7">
+    <section id="soal7">
             <div class="card">
-                <div class="card-header">Soal 7: Manajemen Risiko (Payment Gateway)</div>
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <div class="d-flex justify-content-between">
-                                <strong class="text-danger">1. Isu Legalitas (T&C)</strong>
-                                <span class="badge bg-danger">High Impact</span>
-                            </div>
-                            <small class="text-muted">Mitigasi: Libatkan Legal di Planning. Monitoring: Review Legal sebagai Acceptance Criteria.</small>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="d-flex justify-content-between">
-                                <strong class="text-warning">2. Over-Capacity</strong>
-                                <span class="badge bg-warning text-dark">Medium Impact</span>
-                            </div>
-                            <small class="text-muted">Mitigasi: Gunakan Velocity & Buffer. Monitoring: Cek Burndown tiap hari.</small>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="d-flex justify-content-between">
-                                <strong class="text-danger">3. Fraud Transaction</strong>
-                                <span class="badge bg-danger">High Impact</span>
-                            </div>
-                            <small class="text-muted">Mitigasi: Limit transaksi & Fraud Detection. Monitoring: Dashboard alert.</small>
-                        </li>
-                    </ul>
+                <div class="card-header d-flex justify-content-between">
+                    <span>Soal 7: Manajemen Risiko Sprint (Fitur Payment Gateway)</span>
+                    <span class="badge bg-danger">Critical</span>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped mb-0 small">
+                            <thead class="table-light align-middle text-center">
+                                <tr>
+                                    <th style="width: 5%;">No</th>
+                                    <th style="width: 20%;">Risiko Potensial</th>
+                                    <th style="width: 10%;">Dampak</th>
+                                    <th style="width: 10%;">Probabilitas</th>
+                                    <th style="width: 30%;">Strategi Mitigasi</th>
+                                    <th style="width: 25%;">Monitoring Berkelanjutan</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle">
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td><strong>Isu Legalitas/Dokumentasi</strong><br>(T&C pembayaran tidak jelas/valid)</td>
+                                    <td class="text-center"><span class="badge bg-danger">Tinggi</span></td>
+                                    <td class="text-center">Low</td>
+                                    <td>Libatkan tim Legal/Produk di Sprint Planning untuk review T&C sebelum coding dimulai.</td>
+                                    <td>Masukkan Review Legal sebagai Acceptance Criteria (AC) untuk user story checkout.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2</td>
+                                    <td><strong>Over-Capacity Sprint</strong><br>(Tim ambil terlalu banyak task)</td>
+                                    <td class="text-center"><span class="badge bg-warning text-dark">Medium</span></td>
+                                    <td class="text-center">Medium</td>
+                                    <td>Terapkan Velocity sebagai panduan kapasitas & gunakan buffer time. PO harus tegas prioritas.</td>
+                                    <td>Tinjau Burndown Chart tiap hari. Jika lambat, SM fasilitasi de-scope item.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">3</td>
+                                    <td><strong>Fraudulent Transaction</strong><br>(Transaksi fiktif/penipuan)</td>
+                                    <td class="text-center"><span class="badge bg-danger">Tinggi</span></td>
+                                    <td class="text-center">Medium</td>
+                                    <td>Terapkan limit transaksi harian & integrasi layanan fraud detection eksternal.</td>
+                                    <td>Pantau pola transaksi abnormal via dashboard & atur Alert otomatis.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">4</td>
+                                    <td><strong>Ketidakjelasan Scope</strong><br>(Perubahan alur checkout dadakan)</td>
+                                    <td class="text-center"><span class="badge bg-warning text-dark">Medium</span></td>
+                                    <td class="text-center">Medium</td>
+                                    <td>Kunci scope setelah planning. Perubahan besar harus via Sprint Cancellation atau tunda.</td>
+                                    <td>Dokumentasikan User Story detail & tinjau DoD saat Daily Scrum.</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">5</td>
+                                    <td><strong>Kegagalan Database</strong><br>(Data pembayaran hilang)</td>
+                                    <td class="text-center"><span class="badge bg-danger">Tinggi</span></td>
+                                    <td class="text-center">Low</td>
+                                    <td>Terapkan ACID Transaction (2-Phase Commit) & replikasi database.</td>
+                                    <td>Audit Log teratur, verifikasi backup & consistency check tiap deployment.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <section id="soal8">
+          <section id="soal8">
             <div class="card border-left-warning">
-                <div class="card-header">Soal 8: Konflik Tim (Yoga vs Yogi)</div>
+                <div class="card-header bg-warning text-white">Soal 8: Kolaborasi Tim dan Komunikasi (Konflik Yoga & Yogi)</div>
                 <div class="card-body">
-                    <p><strong>Situasi:</strong> Yoga dan Yogi mengerjakan task yang sama (US-005) karena miskomunikasi.</p>
-                    <div class="alert alert-info">
-                        <strong>Solusi SM Santi:</strong>
-                        <ul>
-                            <li>Yoga melanjutkan US-005 (karena kodenya lebih lengkap).</li>
-                            <li>Yogi pindah ke task US-006.</li>
-                            <li>2 jam kerja Yogi diakui sebagai "Exploration".</li>
-                        </ul>
+                    <div class="alert alert-light border mb-4">
+                        <h6 class="fw-bold"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Skenario Konflik</h6>
+                        <p class="small mb-0">Dua developer, Yoga dan Yogi, secara tidak sengaja mengklaim dan memulai pengerjaan <strong>Task ID: US-005 (Integrasi API Pembayaran Baru)</strong> secara bersamaan.</p>
                     </div>
-                    <p class="mb-0"><strong>Lesson Learned:</strong> Task harus segera di-assign di papan (Jira/Trello) saat Daily Scrum.</p>
+
+                    <h6 class="text-primary fw-bold border-bottom pb-2 mb-3">1. Identifikasi Isu</h6>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <table class="table table-sm table-bordered small">
+                                <tr>
+                                    <th class="bg-light w-25">Pihak Terlibat</th>
+                                    <td>Yoga (3 jam kerja), Yogi (2 jam kerja), Scrum Master (SM) Santi</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-light">Task Konflik</th>
+                                    <td>US-005 (Integrasi API Pembayaran Baru)</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table table-sm table-bordered small">
+                                <tr>
+                                    <th class="bg-light w-25">Dampak Sprint</th>
+                                    <td>Total 5 jam kerja terbuang, risiko rework, potensi penundaan testing fitur.</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-light">Akar Masalah</th>
+                                    <td>US-005 tidak segera dialokasikan di board setelah Yoga mengambilnya, menyebabkan Yogi menganggap task tersebut bebas.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h6 class="text-primary fw-bold border-bottom pb-2 mb-3">2. Diskusi Solusi (Komunikasi Log)</h6>
+                    <div class="table-responsive mb-4">
+                        <table class="table table-sm table-striped small align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th style="width: 10%">Waktu</th>
+                                    <th style="width: 15%">Pihak</th>
+                                    <th>Komunikasi / Tindakan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10:00</td>
+                                    <td class="fw-bold">Yoga</td>
+                                    <td>Melaporkan ke SM Santi: <em>"Saya dan Yogi mengerjakan US-005. Kode saya (branch A) sudah 3 jam, kode Yogi (branch B) 2 jam."</em></td>
+                                </tr>
+                                <tr>
+                                    <td>10:05</td>
+                                    <td class="fw-bold">SM Santi</td>
+                                    <td>Memanggil Yoga dan Yogi untuk <em>quick sync</em>.</td>
+                                </tr>
+                                <tr>
+                                    <td>10:10</td>
+                                    <td class="fw-bold">Yogi</td>
+                                    <td>Menawarkan: <em>"Code Yoga lebih sesuai untuk setup awal karena sudah termasuk unit test. Saya bisa stop dan bantu review code Yoga atau mengerjakan task lain."</em></td>
+                                </tr>
+                                <tr>
+                                    <td>10:12</td>
+                                    <td class="fw-bold">Yoga</td>
+                                    <td>Menawarkan: <em>"Saya akan lanjutkan US-005. Yogi, tolong ambil US-006 (Update Validasi Input) yang baru saja siap."</em></td>
+                                </tr>
+                                <tr>
+                                    <td>10:15</td>
+                                    <td class="fw-bold text-success">SM Santi</td>
+                                    <td><strong>Keputusan Solusi:</strong> Yoga melanjutkan US-005. Yogi segera beralih ke US-006. 2 jam kerja Yogi di US-005 akan diakui sebagai <em>initial exploration effort</em>.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h6 class="text-primary fw-bold border-bottom pb-2 mb-3">3. Keputusan & Follow-up</h6>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="card bg-light h-100 border-success">
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold text-success small">Keputusan Final</h6>
+                                    <ul class="small mb-0 ps-3">
+                                        <li>Yoga melanjutkan & menyelesaikan US-005.</li>
+                                        <li>Yogi segera mengambil US-006 (minimalkan idle time).</li>
+                                        <li>Branch Yogi (branch B) dihapus, effort 2 jam diakui.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-light h-100 border-warning">
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold text-warning text-dark small">Action Items</h6>
+                                    <ul class="small mb-0 ps-3">
+                                        <li><strong>SM Santi:</strong> Segera update Jira/Trello board (US-005 -> Yoga, US-006 -> Yogi).</li>
+                                        <li><strong>Tim:</strong> Pastikan task segera dialokasikan pada board di awal Daily Scrum.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-light h-100 border-primary">
+                                <div class="card-body p-3">
+                                    <h6 class="fw-bold text-primary small">Evaluasi Efektivitas</h6>
+                                    <p class="small mb-0">Konflik selesai dalam 15 menit. Kerugian waktu diminimalisir. Proses komunikasi (alokasi task) diperketat sebagai <em>Lesson Learned (Continuous Improvement)</em>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="soal9">
             <div class="card">
-                <div class="card-header">Soal 9: Sprint Review Report</div>
-                <div class="row g-0">
-                    <div class="col-md-4 bg-success text-white text-center p-4">
-                        <h3>5</h3>
-                        <span>Completed</span>
-                    </div>
-                    <div class="col-md-4 bg-warning text-white text-center p-4">
-                        <h3>2</h3>
-                        <span>Partially Done</span>
-                    </div>
-                    <div class="col-md-4 bg-danger text-white text-center p-4">
-                        <h3>1</h3>
-                        <span>Carried Over</span>
-                    </div>
-                </div>
+                <div class="card-header bg-primary text-white">Soal 9: Comprehensive Sprint Review Report</div>
                 <div class="card-body">
-                    <h6>Feedback Stakeholder:</h6>
-                    <ul class="small text-muted">
-                        <li>Puas dengan 5 fitur selesai.</li>
-                        <li>Request export data pada fitur D.</li>
-                        <li>Penyelarasan warna UI pada fitur B.</li>
-                    </ul>
+                    <h6 class="text-dark fw-bold border-bottom pb-2 mb-3"><i class="fas fa-flag-checkered me-2"></i>1. Sprint Results</h6>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <div class="border rounded p-3 text-center bg-success text-white">
+                                <h2 class="fw-bold mb-0">5</h2>
+                                <span class="fw-bold">COMPLETED</span>
+                                <p class="small mt-2 mb-0 text-white-50">Fitur A, B, C, D, E</p>
+                                <hr class="my-2 border-white">
+                                <p class="small mb-0">Memenuhi DoD & AC. Demo evidence berfungsi baik.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="border rounded p-3 text-center bg-warning text-dark">
+                                <h2 class="fw-bold mb-0">2</h2>
+                                <span class="fw-bold">PARTIALLY DONE</span>
+                                <p class="small mt-2 mb-0">Fitur F, G</p>
+                                <hr class="my-2 border-dark">
+                                <p class="small mb-0">Belum memenuhi DoD. Diprioritaskan sprint berikutnya.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="border rounded p-3 text-center bg-secondary text-white">
+                                <h2 class="fw-bold mb-0">1</h2>
+                                <span class="fw-bold">CARRIED OVER</span>
+                                <p class="small mt-2 mb-0 text-white-50">Fitur H</p>
+                                <hr class="my-2 border-white">
+                                <p class="small mb-0">Belum disentuh. Akan di-re-prioritaskan oleh PO.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h6 class="text-dark fw-bold border-bottom pb-2 mb-3"><i class="fas fa-comments me-2"></i>2. Stakeholder Feedback</h6>
+                    <div class="table-responsive mb-4">
+                        <table class="table table-bordered small">
+                            <tbody>
+                                <tr>
+                                    <th class="bg-light w-25 align-middle">Rangkuman Feedback</th>
+                                    <td>Secara umum, stakeholder <strong>puas</strong> dengan 5 fitur yang telah selesai. Mereka mengapresiasi peningkatan kinerja dan <em>User Interface (UI)</em> pada Fitur C.</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-light align-middle">Requested Changes</th>
+                                    <td>
+                                        <ul class="mb-0 ps-3">
+                                            <li>Menambahkan fitur <strong>Export Data</strong> pada Fitur D.</li>
+                                            <li>Penyelarasan <strong>warna</strong> pada Fitur B agar sesuai panduan branding terbaru.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-light align-middle">Approval Status</th>
+                                    <td>
+                                        <span class="badge bg-success me-1">5 Accepted</span> (Fitur Completed diterima PO & Stakeholder).
+                                        <br>
+                                        <span class="badge bg-danger mt-1">3 Rejected</span> (Partially Done & Carried Over ditolak untuk rilis ini).
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h6 class="text-dark fw-bold border-bottom pb-2 mb-3"><i class="fas fa-chart-bar me-2"></i>3. Sprint Metrics Analysis</h6>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="card h-100 bg-light border-0">
+                                <div class="card-body">
+                                    <h6 class="fw-bold small text-primary">Velocity Achieved</h6>
+                                    <h3 class="fw-bold text-dark">35 SP</h3>
+                                    <p class="small text-muted mb-0">Target: 40 SP</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card h-100 bg-light border-0">
+                                <div class="card-body">
+                                    <h6 class="fw-bold small text-primary">Burndown & Comparison</h6>
+                                    <ul class="small mb-0 ps-3">
+                                        <li class="mb-2"><strong>Burndown Analysis:</strong> Kurva penurunan stabil. Ada sedikit lonjakan di hari terakhir (bug kecil pada Fitur E) yang berhasil diselesaikan tepat waktu.</li>
+                                        <li><strong>Comparison:</strong> Velocity sedikit menurun dari sprint lalu (38 SP) karena kompleksitas tak terduga pada Fitur F. Namun, <strong>kualitas fitur completed dinilai lebih tinggi</strong>.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
 <section id="soal10">
     <div class="card">
         <div class="card-header">Soal 10: Sprint Retrospective Action Plan</div>
@@ -941,5 +1135,6 @@
     </script>
 </body>
 </html>
+
 
 
